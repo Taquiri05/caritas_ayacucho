@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Quiénes somos — Cáritas Ayacucho{% endblock %}
+
+{% block content %}
+
+<!-- HERO SUPERIOR BONITO -->
+<div class="hero-section position-relative">
+  <img src="{{ url_for('static', filename='img/hero2.jpg') }}" class="hero-img">
+  <div class="hero-text">
+    <h1 class="fw-bold">Quiénes somos</h1>
+    <p>70 años transformando vidas en las comunidades del Perú</p>
+  </div>
+</div>
+
+<!-- CONTENEDOR ELEGANTE -->
+<div class="container mt-5">
+
+  <!-- TÍTULO CENTRADO -->
+  <div class="text-center mb-5">
+    <h2 class="fw-bold">Nuestra historia</h2>
+    <div class="underline"></div>
+    <p class="mt-3 text-muted">
+      Cáritas Ayacucho trabaja por el desarrollo humano integral,
+      la dignidad y el bienestar de las comunidades más vulnerables.
+    </p>
+  </div>
+
+  <!-- TARJETA PRINCIPAL -->
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-lg border-0">
+        <img src="{{ url_for('static', filename='img/hero3.jpg') }}" class="img-fluid rounded shadow">
+        <div class="card-body">
+          <p class="card-text">
+            Desde hace décadas venimos trabajando en proyectos de salud,
+            educación, desarrollo social y respuesta ante emergencias
+            en zonas rurales y urbanas del Perú.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MISIÓN / VISIÓN -->
+  <div class="row mt-5">
+
+    <div class="col-md-6">
+      <div class="info-box shadow-sm p-4 rounded bg-white">
+        <h4 class="fw-bold text-danger">Misión</h4>
+        <p>
+          Promover el desarrollo humano integral, la dignidad de las personas
+          y la justicia social en todo el Perú.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="info-box shadow-sm p-4 rounded bg-white">
+        <h4 class="fw-bold text-danger">Visión</h4>
+        <p>
+          Ser una institución referente en ayuda social y desarrollo comunitario,
+          reconocida por su compromiso con los más necesitados.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}

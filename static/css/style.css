@@ -1,0 +1,176 @@
+/* HERO SECTION */
+.hero-section {
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-section .hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.hero-section .hero-text {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-section .hero-text h1 {
+  font-size: 3rem;
+}
+
+/* TITULO CON SUBRAYADO */
+.underline {
+  width: 80px;
+  height: 4px;
+  background-color: #c70039;
+  margin: 0 auto;
+  border-radius: 3px;
+}
+
+/* TARJETAS */
+.card {
+  border-radius: 10px;
+}
+
+.card img {
+  border-radius: 10px 10px 0 0;
+}
+
+.info-box {
+  border-left: 5px solid #c70039;
+}
+
+/* RESALTAR MENÚ ACTIVO */
+.nav-link.active-nav {
+  color: #c70039 !important;
+  font-weight: bold;
+  border-bottom: 2px solid #c70039;
+}
+
+/* NAVBAR MEJORADA */
+.nav-big {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #333 !important;
+  padding-bottom: 8px;
+  transition: 0.3s;
+}
+
+/* Línea roja cuando estás en esa sección */
+.active-nav {
+  color: #c70039 !important;
+  border-bottom: 3px solid #c70039;
+}
+
+/* Hover bonito */
+.nav-big:hover {
+  color: #c70039 !important;
+}
+
+/* Botón DONA */
+.btn-danger {
+  background-color: #d82033 !important;
+  border: none;
+  font-weight: 600;
+}
+
+.navbar-brand span {
+  font-size: 1.3rem;
+}
+
+/* -------------------------
+    QUE HACEMOS - CARDS
+-------------------------- */
+
+.qh-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.qh-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: 0.4s;
+  filter: brightness(80%);
+}
+
+.qh-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(65%);
+}
+
+.qh-text {
+  position: absolute;
+  bottom: 25px;
+  left: 30px;
+  right: 30px;
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* ============================
+   HERO GRANDE - QUÉ HACEMOS
+   ============================ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  /* ← Hero grande estilo portada */
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* ← Recorta igual que la web oficial */
+  filter: brightness(68%);
+  /* ← Oscurece un poco para que resalte */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay h1 {
+  font-size: 4rem;
+  /* ← Texto grande bonito */
+  font-weight: 800;
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* === UNIFICAR TAMAÑO DE IMÁGENES === */
+.donar-card-img {
+  width: 100%;
+  height: 380px;
+  /* <-- Ajusta aquí si quieres más alto o más bajo */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+#otroMontoInput {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+#otroMontoBtn.active {
+  background: #a70e24 !important;
+}

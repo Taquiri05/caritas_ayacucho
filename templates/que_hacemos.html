@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}Qué hacemos — Cáritas Ayacucho{% endblock %}
+
+{% block content %}
+
+<!-- HERO GRANDE -->
+<div class="hero">
+  <img src="{{ url_for('static', filename='img/que1.jpg') }}" class="hero-img">
+  <div class="hero-overlay">
+    <h1>Qué hacemos</h1>
+  </div>
+</div>
+
+<div class="container my-5">
+
+  <p class="text-center fs-5 px-4">
+    Nuestra acción se orienta a la ejecución de programas y proyectos de desarrollo humano integral dirigido a
+    las familias más apartadas del Perú, que viven en situación de pobreza y vulnerabilidad. Buscamos que estas
+    familias sean protagonistas de su propio desarrollo y no pasivos receptores de programas asistenciales.
+    Nuestro reto es reducir la exclusión social, elevando el nivel de participación
+    de los jóvenes y mujeres en nuevos liderazgos de gestión social a favor de sus familias y comunidades.
+
+  </p>
+
+  <hr class="my-5">
+
+  <!-- GRID -->
+  <div class="row g-4">
+
+    <div class="col-md-6">
+      <div class="qh-card">
+        <img src="{{ url_for('static', filename='img/que1.jpg') }}">
+        <div class="qh-text">Desarrollo Humano Integral</div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="qh-card">
+        <img src="{{ url_for('static', filename='img/que2.jpg') }}">
+        <div class="qh-text">Gestión de Riesgos y Atención a Emergencias</div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="qh-card">
+        <img src="{{ url_for('static', filename='img/que3.jpg') }}">
+        <div class="qh-text">Incidencia en Políticas Públicas</div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="qh-card">
+        <img src="{{ url_for('static', filename='img/que4.jpg') }}">
+        <div class="qh-text">Responsabilidad Social y Voluntariado</div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="qh-card">
+        <img src="{{ url_for('static', filename='img/que5.jpg') }}">
+        <div class="qh-text">Ecología Integral</div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="qh-card">
+        <img src="{{ url_for('static', filename='img/que6.jpg') }}">
+        <div class="qh-text">Fortalecimiento Institucional</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

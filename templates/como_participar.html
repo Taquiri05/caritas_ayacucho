@@ -1,0 +1,285 @@
+{% extends "base.html" %}
+{% block title %}Cómo participar — Cáritas Ayacucho{% endblock %}
+
+{% block content %}
+
+<!-- ===========================
+     HERO
+=========================== -->
+<div class="hero-donar">
+  <img src="{{ url_for('static', filename='img/banner1.jpg') }}" alt="Hero Dona">
+  <div class="hero-donar-text">
+    <h1>Dona ahora</h1>
+    <p>Tu ayuda transforma vidas y construye esperanza.</p>
+  </div>
+</div>
+
+<!-- ===========================
+     FORMULARIO
+=========================== -->
+<div class="container text-center mt-5">
+
+  <h2 class="section-title">Dona ahora</h2>
+
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-5">
+      <label>Nombres:</label>
+      <input class="form-control" placeholder="Nombres">
+    </div>
+    <div class="col-md-5">
+      <label>Apellidos:</label>
+      <input class="form-control" placeholder="Apellidos">
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-5">
+      <label>Correo Electrónico:</label>
+      <input class="form-control" placeholder="Correo Electrónico">
+    </div>
+    <div class="col-md-5">
+      <label>Celular:</label>
+      <input class="form-control" placeholder="Celular">
+    </div>
+  </div>
+
+  <!-- MONTOS -->
+  <div class="mt-4">
+    <label>Ingrese el Monto:</label><br>
+
+    <button class="btn btn-outline-danger mx-1 monto-btn" data-value="30">30</button>
+    <button class="btn btn-outline-danger mx-1 monto-btn" data-value="50">50</button>
+    <button class="btn btn-outline-danger mx-1 monto-btn" data-value="100">100</button>
+
+    <!-- OTRO MONTO BOTÓN -->
+    <button id="btnOtroMonto" class="btn btn-outline-danger mx-1">Otro monto</button>
+
+    <!-- INPUT DE OTRO MONTO (OCULTO INICIALMENTE) -->
+    <div id="otroMontoBox" style="display:none;" class="mt-3">
+      <input type="number" class="form-control w-50 mx-auto" id="otroMontoInput" placeholder="Ingrese el monto a Donar:"
+        min="1">
+    </div>
+  </div>
+
+  <div class="mt-3">
+    <input type="checkbox"> Acepto términos y condiciones
+  </div>
+
+  <button class="btn btn-danger mt-4 px-4 py-2" style="border-radius:25px;">Dona a Cáritas</button>
+
+</div>
+
+<!-- ===========================
+     SECCIÓN QR
+=========================== -->
+<div class="container text-center mt-5">
+  <h2 class="section-title">
+    Puedes realizar tu donación a cualquiera de las siguientes cuentas
+  </h2>
+
+  <div class="donation-tabs mt-3">
+    <button class="tab-btn active" data-tab="yape">YAPE</button>
+    <button class="tab-btn" data-tab="bbva">BBVA</button>
+    <button class="tab-btn" data-tab="bcp">BCP</button>
+    <button class="tab-btn" data-tab="extranjera">Cuenta extranjera</button>
+  </div>
+
+  <div class="tab-content mt-4">
+
+    <!-- YAPE -->
+    <div class="tab-pane active" id="yape">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-4 text-center">
+          <div class="qr-box">
+            <img src="{{ url_for('static', filename='img/qr_yape.png') }}" class="qr-img">
+            <h4 class="mt-3">996 379 390</h4>
+            <p>Cáritas del Perú</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <img src="{{ url_for('static', filename='img/yape_logo.png') }}" class="yape-logo mb-2">
+          <p>Escanea el código QR desde la App Yape y realiza tu donación</p>
+          <h4>996379390</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- BBVA -->
+    <div class="tab-pane" id="bbva">
+      <img src="{{ url_for('static', filename='img/bbva_info.png') }}" class="bank-info mx-auto d-block">
+    </div>
+
+    <!-- BCP -->
+    <div class="tab-pane" id="bcp">
+      <img src="{{ url_for('static', filename='img/bcp_info.png') }}" class="bank-info mx-auto d-block">
+    </div>
+
+    <!-- EXTRANJERA -->
+    <div class="tab-pane" id="extranjera">
+      <img src="{{ url_for('static', filename='img/extranjero_info.png') }}" class="bank-info mx-auto d-block">
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ===========================
+     OTRAS FORMAS DE DONAR
+=========================== -->
+<div class="container text-center my-5">
+  <h2 class="section-title">Otras formas de donar</h2>
+
+  <div class="row mt-4">
+
+    <div class="col-md-4 mb-4">
+      <img src="{{ url_for('static', filename='img/voluntariado1.jpg') }}" class="donar-card-img">
+      <a class="btn btn-danger mt-3 px-4 py-2" style="border-radius:25px;">Voluntariado Digital</a>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <img src="{{ url_for('static', filename='img/tarjeta_solidaria.jpg') }}" class="donar-card-img">
+      <a class="btn btn-danger mt-3 px-4 py-2" style="border-radius:25px;">Tarjetas solidarias</a>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <img src="{{ url_for('static', filename='img/materiales.jpg') }}" class="donar-card-img">
+      <a class="btn btn-danger mt-3 px-4 py-2" style="border-radius:25px;">Donar materiales</a>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ===========================
+     CSS
+=========================== -->
+<style>
+  /* HERO */
+  .hero-donar {
+    position: relative;
+    height: 380px;
+    overflow: hidden;
+  }
+
+  .hero-donar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+  }
+
+  .hero-donar-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+  }
+
+  .hero-donar-text h1 {
+    font-size: 3rem;
+  }
+
+  /* SECTION TITLE */
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  /* DONATION TABS */
+  .donation-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .tab-btn {
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    background: #ececec;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .tab-btn.active {
+    background: #c30d2d;
+    color: white;
+  }
+
+  /* QR */
+  .qr-img {
+    width: 260px;
+    border-radius: 15px;
+  }
+
+  .yape-logo {
+    width: 150px;
+  }
+
+  .bank-info {
+    width: 420px;
+    border-radius: 15px;
+  }
+
+  /* OTRAS FORMAS */
+  .donar-card-img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  /* TABS */
+  .tab-pane {
+    display: none;
+  }
+
+  .tab-pane.active {
+    display: block;
+  }
+</style>
+
+
+<!-- ===========================
+     SCRIPTS
+=========================== -->
+<script>
+  // ---------- TABS ----------
+  const buttons = document.querySelectorAll(".tab-btn");
+  const panes = document.querySelectorAll(".tab-pane");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const tab = btn.getAttribute("data-tab");
+
+      panes.forEach(p => {
+        p.classList.remove("active");
+        if (p.id === tab) p.classList.add("active");
+      });
+    });
+  });
+
+
+  // ---------- OTRO MONTO ----------
+  const btnOtro = document.getElementById("btnOtroMonto");
+  const otroBox = document.getElementById("otroMontoBox");
+  const montoBtns = document.querySelectorAll(".monto-btn");
+
+  btnOtro.addEventListener("click", () => {
+    otroBox.style.display = "block";
+  });
+
+  montoBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      otroBox.style.display = "none";
+    });
+  });
+</script>
+
+{% endblock %}
